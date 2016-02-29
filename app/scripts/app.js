@@ -10,8 +10,6 @@
  * Main module of the application.
  */
 
-pamant
-
 angular
   .module('angularApp', [
     'ngAnimate',
