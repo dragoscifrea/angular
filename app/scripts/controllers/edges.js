@@ -8,30 +8,30 @@
  * Controller of the angularApp
  */
 angular.module('angularApp')
-    .controller('EdgesController', function ($scope, edges, categories) {
-        var selectedEdge = null;
-        $scope.edges = edges.query();
-        $scope.categories = categories.query();
+  .controller('EdgesController', function ($scope, edges, categories) {
+    var selectedEdge = null;
+    $scope.edges = edges.query();
+    $scope.categories = categories.query();
 
-        $scope.filterBy = {
-            search: '',
-            category: $scope.categories[0]
-        };
+    $scope.filterBy = {
+      search: '',
+      category: $scope.categories[0]
+    };
 
-        $scope.displayRequirements = function (reqs) {
-            var result = '';
-            for (var i=0; i< reqs.length; i++) {
-                result += reqs[i].name + ' ';
-            }
+    $scope.displayRequirements = function (reqs) {
+      var result = '';
+      for (var i = 0; i < reqs.length; i++) {
+        result += reqs[i].name + ' ';
+      }
 
-            return result;
-        };
+      return result;
+    };
 
-        $scope.isSelected = function (edge) {
-            return selectedEdge === edge;
-        };
+    $scope.isSelected = function (edge) {
+      return selectedEdge === edge;
+    };
 
-        $scope.selectEdge = function (edge) {
-            selectedEdge = (selectedEdge === edge) ? null:edge;
-        };
-    });
+    $scope.selectEdge = function (edge) {
+      selectedEdge = (selectedEdge === edge) ? null : edge;
+    };
+  });

@@ -8,6 +8,6 @@ angular.module('angularApp').filter('edges', function () {
       } else {
           return element.category.name ===  filterBy.category.name;
       }
-    })
-  }
+    });
+  };
 });
